@@ -1,0 +1,66 @@
+/*--- slider output ---*/
+
+.slider {
+	position:relative;}
+
+.slider-content {
+	position:relative;
+	overflow: hidden;
+	height:300px;}
+
+.slide {
+	width:100%;
+	height:100%} 
+
+.slide img {
+	max-width:100%;}
+	
+.slider-controls {
+	position:absolute;
+	right:25px;
+	bottom:25px;
+	text-align:center;}
+	
+.slider-controls .control-slide {
+	margin:2px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(../images/radioBg.png) center bottom no-repeat;
+}
+
+.slider-controls .control-slide:hover {
+	cursor:pointer;
+	background-position:center center;
+}
+.slider-controls .control-slide.active {
+	background-position:center top;
+}
+
+.prew, .next {
+	display:none;
+	width:15px;
+	height:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	text-indent:-999px;
+	background:url(../images/arrowBg.png) left center no-repeat;
+	opacity:0.8;
+	z-index:3;
+}
+.prew {
+	left:10px;
+}
+.next {
+	right:10px;
+	background:url(../images/arrowBg.png) right center no-repeat;
+}
+.prew:hover, .next:hover {
+	opacity:1;
+}
+.slider-content:hover .prew, .slider-content:hover .next {
+	display:block;
+}
