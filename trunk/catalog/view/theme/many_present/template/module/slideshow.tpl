@@ -2,7 +2,7 @@
     <div class="slider-content">
         <?php foreach ($banners as $banner): ?>
         <div class="slide">
-            <img src="<?php echo $banner['image']; ?>"/>
+            <a href="<?php echo $banner['link'] ?>"><img src="<?php echo $banner['image']; ?>"/></a>
         </div>
         <?php endforeach; ?> 
     </div><!-- /slider-content-->
