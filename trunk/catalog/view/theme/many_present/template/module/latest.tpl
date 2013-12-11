@@ -12,7 +12,7 @@
                 <div class="description name">
                 	<p><a href="<?php echo $product['href']?>"><?php echo $product['name']; ?></a></p>
                 </div>
-                <div class="price"><?php echo $product['price']; ?>р.
+                <div class="price"><?php echo $product['price']; ?>
                 </div>
                 <div class="cart">
                 	<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>',<?php echo $product['min_quant']?>,this);" >
