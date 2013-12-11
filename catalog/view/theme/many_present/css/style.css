@@ -533,7 +533,7 @@ body {
 
 
 	
-.innerCarusel > a {
+.eventLinks {
 	display:block;
 	width:90%;
 	background-color:#ffa4ba;
@@ -544,9 +544,16 @@ body {
 	border-radius:5px;
 	color:white;}
 
-.innerCarusel > a:hover {
+.eventLinks:hover {
 	color:#211a14;
 	background-color:#fcf1dc;}
+	
+.innerCarusel {
+	border:1px solid white;}
+	
+.innerCarusel:hover {
+	box-shadow:2px 2px 4px rgba(50, 50, 50, 0.5);
+	border:1px solid #fcf1dc;}
 
 
 /*--- category pages ---------*/
