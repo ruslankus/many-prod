@@ -21,8 +21,6 @@ class ControllerModuleLatest extends Controller {
 		);
 
 		$results = $this->model_catalog_product->getProducts($data);
-        
-        
 
 		foreach ($results as $result) {
 			if ($result['image']) {
@@ -36,8 +34,6 @@ class ControllerModuleLatest extends Controller {
 			} else {
 				$price = false;
 			}
-            
-            
 					
 			if ((float)$result['special']) {
 				$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
@@ -53,10 +49,9 @@ class ControllerModuleLatest extends Controller {
 			
 			$this->data['products'][] = array(
 				'product_id' => $result['product_id'],
-                'min_quant' => $result['minimum'],
 				'thumb'   	 => $image,
 				'name'    	 => $result['name'],
-				'price'   	 => number_format($result['price'],2),
+				'price'   	 => $price,
 				'special' 	 => $special,
 				'rating'     => $rating,
 				'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
@@ -69,8 +64,6 @@ class ControllerModuleLatest extends Controller {
 		} else {
 			$this->template = 'default/template/module/latest.tpl';
 		}
-        
-         
 
 		$this->render();
 	}
