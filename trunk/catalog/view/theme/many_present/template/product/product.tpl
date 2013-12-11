@@ -40,8 +40,19 @@
         	<div class="description">
             	<span><?php echo $text_stock; ?></span>
                  <?php echo $stock; ?><br>
-                <span><?php echo $text_size; ?></span>
-                <?php echo number_format($length,1) ?> x <?php echo number_format($width,1)?> 
+                 
+                <b><?php echo $text_size . $length_preffix; ?></b><br />
+                <?php if($length > 0):?>
+                    длина: <?php echo number_format($length,1) ?><br/>
+                <?php endif;?>
+                
+                <?php if($width > 0):?>
+                 ширина: <?php echo number_format($width,1)?><br/>
+                <?php endif;?>
+                
+                <?php if($height > 0):?>
+                    высота:  <?php echo number_format($height,1)?><br/>
+                <?php endif;?> 
             </div><!--/description -->
             <div class="prod_price">
             	<strong><?php echo $text_price; ?></strong><?php echo $price; ?>  <br/>
