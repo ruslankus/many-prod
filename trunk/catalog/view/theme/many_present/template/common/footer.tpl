@@ -26,12 +26,12 @@
                 </div>
                 
                 <div class="column">
-                	<p class="footAdress">Адрес: 121165 Москва,<br> ул.Студенческая 44/28</p>
-                    <p class="footMail">sale@rdcards.ru</p>
+                	<p class="footAdress">Адрес:<?php echo $address ?> </p>
+                    <p class="footMail"><?php echo $email ?></p>
                 </div>
                 
                 <div class="column">
-                	<p class="footPhone">(495) 933-38-26</p>
+                	<p class="footPhone"><?php echo $telephone ?></p>
                 </div>
             </div><!-- /footerInnerTop -->
         	
