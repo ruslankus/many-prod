@@ -19,6 +19,8 @@ class ControllerCommonHeader extends Controller {
 		$this->data['direction'] = $this->language->get('direction');
 		$this->data['google_analytics'] = html_entity_decode($this->config->get('config_google_analytics'), ENT_QUOTES, 'UTF-8');
 		$this->data['name'] = $this->config->get('config_name');
+        
+        
 		
 		if ($this->config->get('config_icon') && file_exists(DIR_IMAGE . $this->config->get('config_icon'))) {
 			$this->data['icon'] = $server . 'image/' . $this->config->get('config_icon');
@@ -31,7 +33,9 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$this->data['logo'] = '';
 
-		}		
+		}
+        
+       	
 		
 		$this->language->load('common/header');
 		$this->data['og_url'] = (isset($this->request->server['HTTPS']) ? HTTPS_SERVER : HTTP_SERVER) . substr($this->request->server['REQUEST_URI'], 1, (strlen($this->request->server['REQUEST_URI'])-1));
@@ -145,6 +149,8 @@ class ControllerCommonHeader extends Controller {
 			'module/currency',
 			'module/cart'
 		);
+        
+  
 				
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/header.tpl';
