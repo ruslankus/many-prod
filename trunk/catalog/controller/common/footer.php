@@ -18,9 +18,19 @@ class ControllerCommonFooter extends Controller {
 		$this->data['text_wishlist'] = $this->language->get('text_wishlist');
 		$this->data['text_newsletter'] = $this->language->get('text_newsletter');
 		
+        
+        //получение дааных для футера
+        $this->data['email'] =  $this->config->get('config_email');
+        $this->data['telephone'] =  $this->config->get('config_telephone');
+        $this->data['address'] =  $this->config->get('config_address');
+        
+      
+        
 		$this->load->model('catalog/information');
 		
 		$this->data['informations'] = array();
+        
+        
 
 		foreach ($this->model_catalog_information->getInformations() as $result) {
 			if ($result['bottom']) {
@@ -68,8 +78,8 @@ class ControllerCommonFooter extends Controller {
 			}
 						
 			$this->model_tool_online->whosonline($ip, $this->customer->getId(), $url, $referer);
-		}		
-		
+		}
+        
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/footer.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/footer.tpl';
 		} else {
