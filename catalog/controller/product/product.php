@@ -166,7 +166,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-        
+             
         
 		
 		if ($product_info) {
@@ -284,8 +284,9 @@ class ControllerProductProduct extends Controller {
 			$this->data['button_compare'] = $this->language->get('button_compare');			
 			$this->data['button_upload'] = $this->language->get('button_upload');
 			$this->data['button_continue'] = $this->language->get('button_continue');
-			//добавляем размер 
+            	//добавляем размер 
             $this->data['text_size'] = $this->language->get('text_size');
+		
             
             
             
@@ -314,6 +315,20 @@ class ControllerProductProduct extends Controller {
 			} else {
 				$this->data['stock'] = $this->language->get('text_instock');
 			}
+            
+                        
+            
+            
+            // получить см или мм
+            $lengh_pref = 'см';
+            if($product_info['length_class_id'] == 2){
+                $lengh_pref = 'мм: ';            
+            }else{
+               $lengh_pref = 'см: '; 
+            }
+            $this->data['length_preffix'] = $lengh_pref;
+            
+                     
 			
 			$this->load->model('tool/image');
 
@@ -394,6 +409,8 @@ class ControllerProductProduct extends Controller {
 							);
 						}
 					}
+                    
+                    
 					
 					$this->data['options'][] = array(
 						'product_option_id' => $option['product_option_id'],
@@ -414,6 +431,8 @@ class ControllerProductProduct extends Controller {
 					);						
 				}
 			}
+            
+           
 							
 			if ($product_info['minimum']) {
 				$this->data['minimum'] = $product_info['minimum'];
@@ -431,6 +450,8 @@ class ControllerProductProduct extends Controller {
 			
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 			
+           
+            
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
@@ -499,7 +520,7 @@ class ControllerProductProduct extends Controller {
 			);
             
             
-         
+                  
            
 						
 			$this->response->setOutput($this->render());
