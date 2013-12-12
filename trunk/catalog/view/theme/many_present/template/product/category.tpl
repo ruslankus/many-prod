@@ -34,7 +34,11 @@
     <?php if (count($categories) <= 5): ?>
         <ul class="clearfix">
           <?php foreach ($categories as $category): ?>
-          <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+          <li><a href="<?php echo $category['href']; ?>">
+          <?php if($category['thumb']) ?>
+            <img src="<?php echo $category['thumb']; ?>">
+          <?php ?>
+          <?php echo $category['name']; ?></a></li>
           <?php endforeach; ?>
         </ul>
         <?php else: ?>
