@@ -59,6 +59,8 @@
                 </div><!-- /contentTop -->
                 
                 <div class="headerContentBottom">
+                    <div id="slogan">                   
+                    </div>
                 	<div id="search">
                     	<div class="button-search"></div>
                         <input class="inpSearch" type="text" placeholder="Найти.." />
