@@ -217,7 +217,8 @@ class ControllerProductSearch extends Controller {
 			//Вызов метода getFoundProducts должен проводится сразу же после getProducts
 			//только тогда он выдает правильное значения количества товаров
 			$product_total = $this->model_catalog_product->getFoundProducts(); 
-					
+			
+                        		
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -248,10 +249,13 @@ class ControllerProductSearch extends Controller {
 				} else {
 					$rating = false;
 				}
-			
+			     
+                
+                 
 				$this->data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
+                    'min_quant'   => $result['minimum'],
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'price'       => $price,
