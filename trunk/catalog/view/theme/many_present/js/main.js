@@ -11,6 +11,38 @@ $(document).ready(function(e) {
 	});
 	*/
 	
+	/* Search */
+	$('.button-search').bind('click', function() {
+		url = $('base').attr('href') + 'index.php?route=product/search';
+				 
+		var search = $('input[name=\'search\']').attr('value');
+		
+		if (search) {
+			url += '&search=' + encodeURIComponent(search);
+		}
+		
+		location = url;
+	});
+	
+	$('#header input[name=\'search\']').bind('keydown', function(e) {
+		if (e.keyCode == 13) {
+			url = 'index.php?route=product/search';
+			 
+			 
+			 console.log($('base').attr('href'));
+			 
+			var search = $('input[name=\'search\']').attr('value');
+			
+			if (search) {
+				url += '&search=' + encodeURIComponent(search);
+			}
+			
+			
+			location = url;
+		}
+	});
+	
+	
 	
 	/* Ajax Cart */
 	$('#cart > .heading a').live('click', function() {
@@ -54,7 +86,7 @@ $(document).ready(function(e) {
 	
 	
 	
-	//$('#carusel ul').jcarousel({ vertical: false, visible: 5, scroll: 3 });
+	$('#carusel ul').jcarousel({ vertical: false, visible: 5, scroll: 3 });
 	
 	$('#etiketka a').click(function(e) {
         
@@ -104,19 +136,19 @@ function getURLVar(key) {
 
 
 function addToCart(product_id, quantity,obj) {
-	//console.log(product_id,quantity,obj);
+	console.log(product_id,quantity,obj);
 	
 	quantity = typeof(quantity) != 'undefined' ? quantity : 1;
 	//получаем родительский элемент
 	parentObj = $(obj).parent().parent();
-	//console.log(parentObj);
+	
 	
 	// получаем нзавание продукта
 	//prodName = $(parentObj).find('.name p > a').html();
 	
 	// получаем картинку
 	img = $(parentObj).find('.image  a > img');
-	//console.log(img);
+	
 	
 	// получаем координаты картинки
 	imgTop = img.offset().top;
