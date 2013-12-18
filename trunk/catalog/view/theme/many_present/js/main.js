@@ -136,8 +136,7 @@ function getURLVar(key) {
 
 
 function addToCart(product_id, quantity,obj) {
-	console.log(product_id,quantity,obj);
-	
+		
 	quantity = typeof(quantity) != 'undefined' ? quantity : 1;
 	//получаем родительский элемент
 	parentObj = $(obj).parent().parent();
