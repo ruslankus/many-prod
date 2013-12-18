@@ -63,7 +63,7 @@
                     </div>
                 	<div id="search">
                     	<div class="button-search"></div>
-                        <input class="inpSearch" type="text" placeholder="Найти.." />
+                        <input class="inpSearch" type="text" placeholder="Найти.." value="<?php echo $search; ?>" name="search" />
                     </div><!-- /search -->
                     
                     <div id="welcome">
