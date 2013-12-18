@@ -303,8 +303,11 @@ body {
 	padding-left:4px;
 	display:block;
 	width:231px;
-	text-transform:uppercase;
+	text-transform:lowercase;
 	text-decoration:none;}
+	
+.box-category > li > a:first-letter {
+	text-transform:capitalize;}
 	
 .box-category > li > a.active_child {
 	background:url(../images/minus.png) 95% 50% no-repeat;}
@@ -1165,4 +1168,42 @@ td.total {
 	
 .error {
 	color:red;
-	font-size:12px;}	
+	font-size:12px;}
+	
+/* --- search section ------*/
+
+.searchArea	{
+	padding:10px;
+	border:1px solid #fcf1dc;}
+	
+.searchArea input[type='text'] {
+	width:200px;
+	height:20px;
+	border:1px solid #ffa4ba;}
+	
+.searchArea p {
+	margin-bottom:10px;}	
+	
+.searchArea select {
+	width:160px;
+	height:22px;
+	border:1px solid #ffa4ba;}
+	
+#button-search {
+	height:24px;
+	padding-left:15px;
+	padding-right:15px;
+	border:1px solid #ffa4ba;
+	background-color:#ffa4ba;
+	border-radius:5px;
+	color:white;}
+
+
+#button-search:hover {
+	background-color:#fcf1dc;
+	color:#211a14;}
+	
+.searchArea + .buttons {
+	margin-top:10px;
+	padding:10px;
+	border:1px solid #fcf1dc;}
