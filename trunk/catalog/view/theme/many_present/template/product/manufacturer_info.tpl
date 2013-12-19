@@ -53,7 +53,7 @@
         <div class="new_item ">
             <?php if($product['thumb']):?>
         	<div class="image">
-            	<a href="<?php echo $product['href']?>" title="<?php echo $product['name']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="" /></a>
+            	<a href="<?php echo $product['href']?>" title="<?php echo $product['name']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a>
             </div>
             <?php endif;?>
             <div class="description name">
