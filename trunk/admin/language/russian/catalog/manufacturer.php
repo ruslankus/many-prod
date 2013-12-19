@@ -8,7 +8,7 @@ $_['text_default']       		= 'Основной магазин';
 $_['text_image_manager'] 		= 'Менеджер изображений';
 $_['text_browse']        		= 'Обзор';
 $_['text_clear']         		= 'Очистить';
-$_['text_percent']       = 'Процент';
+$_['text_percent']           = 'Процент';
 $_['text_amount']        = 'Фиксированная сумма';
 
 // Column
