@@ -21,7 +21,7 @@
             <div class="left">
                 <?php if ($thumb): ?> 
                 	<div class="image">
-                    	<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" data-lightbox="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" alt=""  width="228px"/></a>
+                    	<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" data-lightbox="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" alt=""  width="228px" alt="<?php echo $heading_title; ?>"/></a>
                     </div><!-- /image -->
                 <?php endif; ?>
                 <?php if ($images): ?>
@@ -84,7 +84,7 @@
                 
                 <div class="new_item ">
                     <div class="image">
-                        <img src="<?php echo $product['thumb']; ?>" alt="" />
+                        <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" />
                     </div>
                     <div class="description name">
                         <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
