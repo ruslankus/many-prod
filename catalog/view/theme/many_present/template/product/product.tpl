@@ -21,7 +21,7 @@
             <div class="left">
                 <?php if ($thumb): ?> 
                 	<div class="image">
-                    	<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" data-lightbox="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" alt=""  width="228px" alt="<?php echo $heading_title; ?>"/></a>
+                    	<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" data-lightbox="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>"  width="228px"/></a>
                     </div><!-- /image -->
                 <?php endif; ?>
                 <?php if ($images): ?>
