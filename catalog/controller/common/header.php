@@ -100,6 +100,9 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$parts = array();
 		}
+        
+        //получаем телефон
+        $this->data['telephone'] =  $this->config->get('config_telephone');
 
 		$this->load->model('catalog/category');
 		
