@@ -54,7 +54,7 @@
                     <?php echo $cart; ?> 
                     
                     <div class="phoneNumber">
-                    	<p>(495) 933-38-26</p>
+                    	<p><?php echo $telephone ?></p>
                     </div>
                 </div><!-- /contentTop -->
                 
